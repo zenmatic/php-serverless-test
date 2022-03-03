@@ -1,0 +1,15 @@
+{
+    "require": {
+        "php": ">= 7.4",
+        "google/cloud-functions-framework": "^1.1",
+        "google/cloud-firestore": "^1.21",
+        "grpc/grpc": "^1.38",
+        "google/protobuf": "^3.17"
+    },
+    "scripts": {
+        "start": [
+           "Composer\\Config::disableProcessTimeout",
+           "FUNCTION_TARGET=helloHttp php -S localhost:${PORT:-8080} vendor/google/cloud-functions-framework/router.php"
+        ]
+    }
+}
